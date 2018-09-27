@@ -1,25 +1,29 @@
 ## 美好的一天
 
-You can use the [editor on GitHub](https://github.com/MITZ1979/myH5/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+### php的跳转的方法
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<?php
+    $url = 'https://mitz1979.github.io/myh5/';
+    if(isset($url)){
+        header("Location:.$url");
+    }else{
+      echo "页面不存在！";
+    }
+?>
 
-### Markdown
+### js 跳转页面
+<?php
+    $url = 'https://mitz1979.github.io/myh5';
+    if(isset($url)){
+        echo "<script>Location.herf='. $url .'</script>"
+    }else{
+      echo "页面不存在！";
+    }
+?>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### html 代码跳转
+```html
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
 
 **Bold** and _Italic_ and `Code` text
 
