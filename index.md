@@ -1,7 +1,7 @@
 ## 美好的一天
 
 ### php的跳转的方法
-
+```
 <?php
     $url = 'https://mitz1979.github.io/myh5/';
     if(isset($url)){
@@ -10,8 +10,9 @@
       echo "页面不存在！";
     }
 ?>
-
+```
 ### js 跳转页面
+```
 <?php
     $url = 'https://mitz1979.github.io/myh5';
     if(isset($url)){
@@ -20,7 +21,7 @@
       echo "页面不存在！";
     }
 ?>
-
+```
 ### html 代码跳转
 ```html
 
