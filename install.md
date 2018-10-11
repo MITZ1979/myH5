@@ -104,6 +104,7 @@ Nginx中如果服务器提供安全页面，就需要用到OpenSSL库。其下�
  Nginx相关命令：
  ```
  nginx -h   帮助
- nginx -s Stop  立即停止守护进程
- nginx -quit
+ nginx -s stop  立即停止守护进程(TERM信号)
+ nginx -s quit  温和的停止守护进程(QUIT信号)
+ ```
  
