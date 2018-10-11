@@ -51,11 +51,59 @@ systemctl list-dependencies | grep nginx
  也可以通过yum安装
  
  ```
- yum install pcre-devel
+ yum install pcre pcre-devel
  ```
  zlib库：
- 
+ zlib库提供了压缩算法，Nginx很多地方都会用到gzip算法。其下载地址为http://www.zlib.net/
  也可以通过yum安装
  ```
  yum install zlib zlib-devel
  ```
+OpenSSL:
+Nginx中如果服务器提供安全页面，就需要用到OpenSSL库。其下载地址为http://www.openssl.org/
+ 也可以通过yum安装
+ ```
+ yum install openssl openssl-devel
+ ```
+ 下载nginx的最新版本
+ http://nginx.org/en/download.html
+ ```
+ wget http://nginx.org/download/nginx-1.5.8.tar.gz
+ ```
+ 解压nginx安装包
+ ```
+ taar -xzf nginx-1.5.8.tar.gz
+ ```
+ 进入nginx-1.5.8
+ ```
+ cd nginx-1.5.8
+ ```
+ 执行配置命令[ningx被默认安装在usr/local/nginx中]
+ 
+ ```
+ ./configure
+ 
+ ./configure --prefix=/mnt/disk1/nginx--with-http_status_module --with-http_ssl 等等。
+ ```
+ 执行make && make install 安装Nginx
+ ```
+ make && make install
+ ```
+ 执行nginx-t 检查配置文件是否正确
+ ```
+ nginx-t
+ ```
+ 进入/usr/local/nginx/sbin目录
+ ```
+ ./nginx   //启动nginx服务
+ ```
+ 如果发现80端口被占用，可能是ningx服务已经启动。
+ ```
+ netstat -tunlp|grep 80
+ ```
+ Nginx相关命令：
+ ```
+ nginx -h   帮助
+ nginx -s Stop  立即停止守护进程
+ nginx -quit
+ 
